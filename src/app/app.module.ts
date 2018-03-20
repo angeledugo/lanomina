@@ -12,7 +12,6 @@ import { AppComponent } from './app.component';
 import { AuthLayoutComponent } from './_layout/auth/auth-layout.component';
 import { AdminLayoutComponent } from './_layout/admin/admin-layout.component';
 import { SharedModule } from './shared/shared.module';
-import { ScrollModule } from './scroll/scroll.module';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 
 
@@ -30,9 +29,8 @@ import { LocationStrategy, PathLocationStrategy } from '@angular/common';
     RouterModule.forRoot(AppRoutes),
     FormsModule,
     HttpModule,
-    ScrollModule
   ],
-  exports: [ScrollModule, FormsModule],
+  exports: [FormsModule],
   providers: [
     { provide: LocationStrategy, useClass: PathLocationStrategy }
   ],

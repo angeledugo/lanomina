@@ -30,7 +30,7 @@ export class NccostoComponent implements OnInit {
     if(this.identity == null && !this.identity.sub) {
       this._router.navigate(['/login']);
     } else {
-      this.ccosto = new CCosto(1,'','',,'null','null');
+      this.ccosto = new CCosto(1,'','',0,'null','null');
     }
 
   }
