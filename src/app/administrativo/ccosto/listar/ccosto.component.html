@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-sm-12">
+    <!-- Basic table card start -->
+    <div class="card card-border-primary">
+      <div class="card-header">
+        <h5>Centro de Costos</h5>
+        <button [routerLink]="['/admin/centro-costo/nuevo']" class="btn btn-primary waves-effect waves-light f-right d-inline-block md-trigger" type="button">
+          <i _ngcontent-c25="" class="icofont icofont-plus m-r-5"></i> Nuevo
+        </button>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Empresaa</th>
+              <th>Nit</th>
+              <th>Contacto</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let companie of companies">
+              <th scope="row">1</th>
+              <td>{{companie.name}}</td>
+              <td>{{companie.idNumber}}</td>
+              <td>@mdo</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

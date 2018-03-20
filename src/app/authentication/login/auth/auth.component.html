@@ -1,0 +1,50 @@
+<section class="login p-fixed d-flex text-center bg-primary common-img-bg">
+  <!-- starts -->
+  <div class="auth-fluid">
+    <div class="row">
+      <div class="col-sm-12">
+          <div class="col-md-12 alert alert-success" *ngIf="identity">
+              ¡Te has logueado correctamente! Bienvenido {{identity.email}}
+            </div>
+        <!-- Authentication card start -->
+        <div class="login-card card-body auth-body">
+          <form #loginForm="ngForm" class="md-float-material" (ngSubmit)="onSubmit()">
+            <div class="auth-box">
+              <div class="row m-b-20">
+                <div class="col-md-12">
+                  <h3 class="text-center txt-primary">Lanomina.net</h3>
+
+                </div>
+              </div>
+
+              <p class="text-inverse b-b-default text-left p-b-5">Login de acceso</p>
+              <div class="form-group has-danger">
+                <input type="email" #email="ngModel" [(ngModel)]="user.email" name="email" class="form-control" required placeholder="Usuario"
+                  required>
+                <span class="md-line"></span>
+                <div *ngIf="!email.valid && email.touched" class="col-form-label">Disculpa, el usuario escrito es invalido!</div>
+              </div>
+              <div class="form-group has-danger">
+                <input type="password" #password="ngModel" [(ngModel)]="user.password" name="password" required class="form-control" placeholder="password"
+                  required>
+                <div *ngIf="!password.valid && password.touched" class="col-form-label">Disculpa, el contraseña escrita es invalida!</div>
+              </div>
+              <div class="row m-t-25 text-left">
+                <div class="col-sm-6 col-xs-12">
+                </div>
+                <div class="col-sm-6 col-xs-12 forgot-phone text-right">
+                  <a [routerLink]="['/authentication/forgot']" class="text-right f-w-600 text-inverse"> Recuperar contraseña?</a>
+                </div>
+              </div>
+              <div class="row m-t-30">
+                <div class="col-md-12">
+                  <button type="submit" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Processing Order" class="btn btn-primary btn-md btn-block waves-effect text-center m-b-20">LOGIN</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

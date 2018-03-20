@@ -19,13 +19,20 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "../node_modules/jquery/dist/bootstrap.scss",
-        "../node_modules/font-awesome/scss/font-awesome.scss",
-        "styles.scss"
+        "../node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "../node_modules/ti-icons/css/themify-icons.css",
+        "assets/icon/icofont/css/icofont.css",
+        "../node_modules/ng2-toasty/style-bootstrap.css",
+        "../node_modules/ng2-toasty/style-default.css",
+        "../node_modules/ng2-toasty/style-material.css",
+        "styles.scss",
+        "assets/css/custom.css"
       ],
       "scripts": [
-        "../node_modules/jquery/dist/jquery.slim.min.js",
-        "../node_modules/bootstrap/dist/js/bootstrap.min.js",
+        "../node_modules/jquery/dist/jquery.min.js",
+        "../node_modules/raphael/raphael.js",
+        "../node_modules/morris.js/morris.js",
+        "../node_modules/jquery-sparkline/jquery.sparkline.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

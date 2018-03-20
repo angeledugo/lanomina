@@ -1,0 +1,42 @@
+<div class="row">
+  <div class="col-sm-12">
+    <!-- Basic table card start -->
+    <div class="card card-border-primary">
+      <div class="card-header">
+        <h5>Agregar Centro de Costos</h5>
+      </div>
+      <div class="card-block">
+        <form #ccostoNewForm="ngForm" (ngSubmit)="onSubmit()">
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Nombre</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Nombre del centro de costo"  name="nombre" #nombre="ngModel" [(ngModel)] = "ccosto.nombre">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Codigo</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" placeholder="Codigo unico centro de costo" name="codigo" #codigo="ngModel" [(ngModel)] = "ccosto.codigo">
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Estado</label>
+            <div class="col-sm-10">
+                <select name="estatus" class="form-control" #estado="ngModel" name="estado" [(ngModel)] = "ccosto.estado">
+                    <option value="0">Inactivo</option>
+                    <option value="1">Activo</option>
+                </select>
+            </div>
+          </div>
+          <button  class="btn btn-primary waves-effect waves-light f-right d-inline-block md-trigger" type="submit">
+            <i _ngcontent-c25="" class="icofont icofont-save m-r-5"></i> Guardar
+          </button>
+        </form>
+
+      </div>
+      <div class="card-footer">
+
+      </div>
+    </div>
+  </div>
+</div>
